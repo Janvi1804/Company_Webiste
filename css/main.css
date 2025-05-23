@@ -2755,4 +2755,61 @@ section,
     }
 
 
+    /* Base style for custom thumbnails */
+.carousel-indicators-custom {
+  position: absolute;
+  top: 20%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicators-custom img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  border: 2px solid transparent;
+  transition: opacity 0.3s, border 0.3s;
+}
+
+.carousel-indicators-custom img:hover,
+.carousel-indicators-custom img.active {
+  opacity: 1;
+  border: 2px solid #fff;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .carousel-indicators-custom {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .carousel-indicators-custom img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-caption {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+
     
